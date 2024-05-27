@@ -16,8 +16,9 @@ class ToDo extends StatelessWidget {
       home: const TodoScreen(),
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xff56B359),
-          foregroundColor: Colors.white
+          backgroundColor: Colors.green,
+          foregroundColor: Colors.white,
+          elevation: 6,
         ),
         inputDecorationTheme: const InputDecorationTheme(
           contentPadding: EdgeInsets.fromLTRB(10, 5, 10, 5),

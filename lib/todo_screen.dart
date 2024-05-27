@@ -9,7 +9,6 @@ class TodoScreen extends StatefulWidget {
 
 class _TodoScreenState extends State<TodoScreen> {
   final TextEditingController _listItemTEController = TextEditingController();
-  final GlobalKey<FormState> _globalKey = GlobalKey<FormState>();
   List listData = [];
 
   @override
@@ -17,7 +16,7 @@ class _TodoScreenState extends State<TodoScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('ToDo App'),
+        title: const Text('ToDo App', style: TextStyle(fontWeight: FontWeight.w600),),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -30,7 +29,7 @@ class _TodoScreenState extends State<TodoScreen> {
                     Expanded(
                       flex: 70,
                       child: TextFormField(
-                        key: _globalKey,
+
                         controller: _listItemTEController,
                         decoration: const InputDecoration(
                           labelText: 'List Item',
